@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chat SignalR</title>
+</head>
+<body>
+    <input type="text" id="user" placeholder="Tên" />
+    <input type="text" id="msg" placeholder="Nội dung" />
+    <button onclick="send()">Gửi</button>
+    <ul id="list"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <script>
+        const conn = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+        conn.on("ReceiveMessage", (u, m) => {
+            const li = document.createElement("li");
+            li.textContent = u + ": " + m;
+            document.getElementById("list").appendChild(li);
+        });
+        conn.start();
+        function send() {
+            const u = document.getElementById("user").value;
+            const m = document.getElementById("msg").value;
+            conn.invoke("SendMessage", u, m);
+        }
+    </script>
+</body>
+</html>

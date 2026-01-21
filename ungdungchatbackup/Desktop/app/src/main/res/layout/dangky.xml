@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_vertical"
+    android:background="?attr/colorSurface">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TẠO TÀI KHOẢN"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textColor="?attr/colorOnSurface"/>
+
+            <EditText
+                android:id="@+id/edUsername"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Tên đăng nhập"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/edFullName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Họ và tên"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/edConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Xác nhận mật khẩu"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bảo mật khôi phục &amp; Mã PIN"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"/>
+
+            <EditText
+                android:id="@+id/edSecurityQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Câu hỏi bảo mật (VD: Tên thú cưng?)"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/edSecurityAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Câu trả lời bảo mật"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <EditText
+                android:id="@+id/edPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Mã PIN đăng nhập (4 chữ số)"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="?attr/colorOnSurface" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ĐĂNG KÝ NGAY"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

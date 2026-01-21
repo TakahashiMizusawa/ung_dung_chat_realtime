@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHỈNH SỬA TÀI KHOẢN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:layout_marginBottom="30dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgEditAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/edtNewFullName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Họ và tên mới"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="textPersonName"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#757575"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận bảo mật:"
+        android:textStyle="italic"
+        android:textColor="#424242"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/edtCurrentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Mật khẩu hiện tại (Bắt buộc)"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="textPassword"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#757575"/>
+
+    <EditText
+        android:id="@+id/edtNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Mật khẩu mới (Để trống nếu không đổi)"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="30dp"
+        android:inputType="textPassword"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#757575"/>
+
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="LƯU THAY ĐỔI"
+        android:backgroundTint="#2196F3"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+</LinearLayout>

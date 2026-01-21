@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XÁC NHẬN MÃ PIN"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#128C7E"/>
+
+    <EditText
+        android:id="@+id/edPinInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="****"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnConfirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MỞ KHÓA"
+        android:backgroundTint="#128C7E"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

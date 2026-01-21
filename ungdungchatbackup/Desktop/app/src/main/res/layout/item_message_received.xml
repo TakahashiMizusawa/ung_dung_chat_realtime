@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- KHUNG TIN NHẮN NHẬN -->
+    <LinearLayout
+        android:id="@+id/containerReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="60dp"
+        android:orientation="vertical">
+
+        <!-- TEXT -->
+        <TextView
+            android:id="@+id/tvMessageReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_received"
+            android:maxWidth="280dp"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- IMAGE -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImageReceived"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            android:visibility="gone">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutImageReceived"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_auto_start="true">
+
+                <ImageView
+                    android:id="@+id/imgMessageReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#EEEEEE" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FILE -->
+        <LinearLayout
+            android:id="@+id/layoutFileReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_message_received"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_save"
+                app:tint="#424242" />
+
+            <TextView
+                android:id="@+id/tvFileNameReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:maxWidth="180dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- REACTION -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardReactionReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerReceived"
+        android:layout_marginTop="-10dp"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvReactionReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:textSize="12sp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
